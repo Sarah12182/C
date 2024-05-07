@@ -1,0 +1,791 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2024/05/07</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5d76e8a2-f5a9-4a27-adc6-45d34ae6caee" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🔸</span></div><h1 class="page-title">2024/05/07</h1><p class="page-description"></p></header><div class="page-body"><p id="0adb22e6-ffe2-4343-bd63-9c5004adf5f4" class="">
+</p><ul id="48955278-3537-48d8-b0b9-69a0693353c5" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked"><a href="https://www.notion.so/2024-05-07-5d76e8a2f5a94a27adc645d34ae6caee?pvs=21">Fundamentals of Array Theory</a></span><div class="indented"></div></li></ul><ul id="39c61e87-363c-47d8-84ac-7e7b4d2b3f73" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked"><a href="https://www.notion.so/2024-05-07-5d76e8a2f5a94a27adc645d34ae6caee?pvs=21">704 Binary Search</a></span><div class="indented"></div></li></ul><ul id="f2ed9e47-5190-4844-a624-7c475cc2d64f" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked"><a href="https://www.notion.so/2024-05-07-5d76e8a2f5a94a27adc645d34ae6caee?pvs=21">27 Remove Elements</a></span><div class="indented"></div></li></ul><h2 id="d2b0f3db-43b3-4289-a64b-3c2dc45b5ab4" class=""><span style="border-bottom:0.05em solid">Array Fundamentals</span></h2><h3 id="a7c62556-af8c-44d9-bfa4-54843e071b20" class="">指向字符的指针 const char *A</h3><p id="d0fcf661-5f6b-47f2-98da-68927c5a1338" class="">base address: &amp;A[0] A</p><p id="1d951017-a622-4799-b3d7-31ec445ab418" class="">value of the first element: *A A[0]</p><p id="f33626b9-b6c4-4c28-a990-9291f3b1e930" class="">address of i: &amp;A[i] (A+i)</p><p id="d82e523f-fa1f-4336-9929-c6f29677226f" class="">value of i: *(A+i) A[i]</p><p id="5b85aa4e-1e1f-443c-b77a-467b00bfa84e" class="">（适用于整型数组，字符数组，字符串）</p><h3 id="4ceab13d-6b9f-403d-81e7-f90e806e584b" class="">Pointer and Array Index</h3><p id="8dadac6c-2a04-4685-bb22-45842b73a6db" class="">// Pointer：</p><p id="17c92d92-5a31-4b32-bcc2-8726bd70f49c" class="">int *ptr;</p><p id="4d6f9530-1041-4796-8044-c3b225209d02" class="">*(ptr+2) = 30;</p><p id="291f7b57-15b1-42a2-8986-cf4698501763" class="">// Array index:</p><p id="83bdc972-d265-40f1-8da3-0ba6437b1b02" class="">arr[2] = 30;</p><p id="0f9e48cc-f4f7-4f74-9aa6-4c8d26e7f903" class="">
+</p><h2 id="bf6d8227-71ae-49a4-944f-169970c96bb2" class=""><span style="border-bottom:0.05em solid">704. Binary Search</span></h2><p id="1cb62717-1d83-4730-8673-33f5753feaf0" class="">
+</p><p id="f204d9ca-4214-47c6-9e60-c91e07aaea07" class=""><strong>target: [ left, right ]</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fba82bcc-bdbd-4370-bb04-fa4c9c672f0e" class="code"><code class="language-C">int search(int *nums, int numsSize, int target)
+{
+
+    int left = 0;
+    int right = numsSize - 1;
+    int middle = 0;
+
+    while (left &lt;= right)
+    {
+        middle = (left + right) / 2;
+
+        if (nums[middle] &gt; target)
+        {
+            right = middle - 1;
+        }
+        else if (nums[middle] &lt; target)
+        {
+            left = middle + 1;
+        }
+        else if (nums[middle] == target)
+        {
+            return middle;
+        }
+    }
+
+    return -1;
+}</code></pre><p id="72dd80b0-1f05-4650-b48f-307f851698dc" class="">
+</p><p id="9e6012c6-b3ce-4269-8d42-d9e8417390da" class=""><strong>target: [ left, right )</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a519f4c2-efe8-44e3-b917-86cf819a972b" class="code"><code class="language-C">int search(int *nums, int numsSize, int target)
+{
+    int left = 0;
+    int right = numsSize;
+    int middle = 0;
+    
+    while (left &lt; right)
+    {
+        middle = left + (right-left) / 2;
+        
+        if (nums[middle] &gt; target)
+        {
+            right = middle;
+        }
+        else if (nums[middle] &lt; target)
+        {
+            left = middle + 1;
+        }
+        else if (nums[middle] == target)
+        {
+            return middle;
+        }
+    }
+    return -1;
+}</code></pre><p id="0d4dfecb-5ef4-4f9a-ac6c-f89c7ca371b0" class="">
+</p><p id="75ed8be9-41ca-4ae6-a4b1-444623f28190" class="">//</p><p id="a5caec81-7279-4885-872a-05819cec8049" class="">二分法运用条件：数组为有序数组；数组中无重复元素</p><p id="2e145b46-ba71-46c7-834e-1053c98a4d26" class="">middle存放每次计算得到的中间的索引</p><p id="c4b0356f-f5b3-405e-ad92-c9fdf6c29ec0" class="">left和right如果是很大的整数，可以避免溢出</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5dd1f677-c8f6-4341-ac5c-e6263bb4d4ca" class="code"><code class="language-C">middle = (left + right) / 2; 
+middle = left + (right-left) / 2; </code></pre><p id="bce4e4d8-8c73-4b55-8200-d46d0e72588f" class="">
+</p><h3 id="82626646-fe6e-4688-b764-264b1cb50d14" class="">总结：</h3><p id="1dc1401b-5405-494f-854e-a1477940c3ce" class=""><strong>target: [ left, right ] </strong></p><p id="3db90b9f-f92b-4df4-a461-866fdeb57ce4" class="">right = numsSize-1; </p><p id="33ff7494-4b56-4181-ad8d-ef0a301db3a4" class="">while <span style="border-bottom:0.05em solid">(left &lt;= right)</span>是合理合法区间；</p><p id="4d6d7a37-bf14-4da8-a36a-98c4aa7ffd1d" class="">更新右边界 right = middle-1；</p><p id="3dbb3eb5-bd4d-4449-b28e-b377a5c95767" class="">更新左边界 left = middle+1；</p><p id="03a28266-9d74-4e41-82e6-7a0b4a663789" class="">// 因为左右两个值都可以取到，所以更新边界需要排除掉middle。</p><p id="b9f32a6b-ea69-4e45-b7a6-e60412384a52" class="">
+</p><p id="bfb0e787-8cf5-4345-801b-c049369e1b90" class=""><strong>target: [ left, right )</strong></p><p id="690ec328-093c-4704-bb95-ec7eda2d8b31" class="">right = numsSize;</p><p id="4c7efda2-6b27-43b8-9320-f2234fc1c465" class="">while(left&lt;right)因为left和right的值不能相等。</p><p id="ca32caa9-f17b-47b9-a5a1-09c4c8e7705b" class="">更新右边界 right = middle；</p><p id="707f8b41-d5a7-4c77-abde-21b77c910001" class="">更新左边界 left = middle+1；</p><p id="0a343c3b-09ae-4423-9bd0-28bbe0e1b19b" class="">// 由于right为开区间，不能取到right的值，所以更新右边界为middle，可以不用排除。左边界需要排除middle。</p><p id="096e1131-64f3-4d37-ba09-2ec89eee0277" class="">
+</p><h2 id="238d1044-a2f2-4c34-a962-77f299493f3c" class=""><span style="border-bottom:0.05em solid">27. Remove Element</span></h2><p id="9861cf69-a209-40fe-a3a4-2c31fd38f064" class="">
+</p><p id="1739162b-74f7-4a16-96a6-fc33247e2731" class=""><strong>Two pointers: (1 for Loop)</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="39969552-6fdb-44d8-b315-44f23475a9e2" class="code"><code class="language-C">int removeElement(int *nums, int numsSize, int val)
+{
+
+    int i = 0;
+    int j = 0;
+    for (i = 0; i &lt; numsSize; i++)
+    {
+        if (nums[i] != val)
+        {
+            nums[j] = nums[i];
+            j++;
+        }
+    }
+    return j;
+}</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d1169d60-7175-4c7e-b5f2-c1c3b5ff4513" class="code"><code class="language-C" style="white-space:pre-wrap;word-break:break-all">int removeElement(int* nums, int numsSize, int val){
+    int slow = 0;
+    for(int fast = 0; fast &lt; numsSize; fast++) {
+        //若快指针位置的元素不等于要删除的元素
+        if(nums[fast] != val) {
+            //将其挪到慢指针指向的位置，慢指针+1
+            nums[slow++] = nums[fast];
+        }
+    }
+    //最后慢指针的大小就是新的数组的大小
+    return slow;
+}</code></pre><p id="ca840fae-6dd8-4da9-b25a-78155442ce43" class="">
+</p><p id="b89858fb-f921-4780-86c0-a6e96a61faf4" class=""><strong>Normal Method: (2 for loop)</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="dba9ad34-23ae-4204-a35b-846603992228" class="code"><code class="language-C">int removeElement(int *nums, int numsSize, int val)
+{
+    int i = 0;
+    int j = 0;
+    for (i = 0; i &lt; numsSize; i++)
+    {
+        if (nums[i] == val)
+        {
+            for (j = i + 1; j &lt; numsSize; j++)
+            {
+                nums[j - 1] = nums[j];
+            }
+            i--;
+            numsSize--;
+        }
+    }
+    return numsSize;
+}</code></pre><p id="e37336d5-2d17-43f8-b64d-87bdcc46c72c" class="">
+</p><p id="fd9b561b-65d7-4a21-add9-41a6e92e1106" class="">第一个for循环：用i开始遍历整个数组，在等于val的情况下，开始执行第二个for循环。</p><p id="6ea30086-3c32-420b-a458-6e95304b401d" class="">第二个for循环：用于将索引i开始的所有元素向前移动一个位置。</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f73813b8-ea77-4645-b812-bc73f100f7ca" class="code"><code class="language-C">            // 要从等于val的下一位开始进行处理 即用i+1开始的元素来覆盖前面的
+            for (j = i + 1; j &lt; numsSize; j++)
+            {
+            // 将j位置的元素复制到前一位置 目的是将找到的val覆盖掉
+                nums[j - 1] = nums[j];
+            }
+            // 在处理后其实为i+1处的元素移动到了i处 移动后的i元素是未经过比较的 所以要往前移一位再进行检查
+            i--;
+            // 减小数组长度 每循环一次第二个for 长度都减1
+            numsSize--;</code></pre><p id="b5185825-6ea1-4db0-a5f4-15abd3ab5f24" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">int middle = 0;</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">Z</span></span><span><b>ZI LI</b> <time style="font-size:0.8em">May 7, 2024, 11:53 AM</time></span></span></div><div style="padding:0.2em">middle存放每次计算得到的中间的索引</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"><strong>left &lt;= right</strong></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">Z</span></span><span><b>ZI LI</b> <time style="font-size:0.8em">May 7, 2024, 1:43 PM</time></span></span></div><div style="padding:0.2em">当target区间为[ left, right ]，while (<strong>left &lt;= right</strong>)是合理合法区间。</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">middle = left + (right-left) / 2; </mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">Z</span></span><span><b>ZI LI</b> <time style="font-size:0.8em">May 7, 2024, 11:57 AM</time></span></span></div><div style="padding:0.2em">left和right如果是很大的整数，可以避免溢出</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Resolved inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">int middle = 0;</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">Z</span></span><span><b>ZI LI</b> <time style="font-size:0.8em">May 7, 2024, 11:52 AM</time></span></span></div><div style="padding:0.2em">middle存放每次计算得到的中间的索引</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"><strong>left &lt; right</strong></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">Z</span></span><span><b>ZI LI</b> <time style="font-size:0.8em">May 7, 2024, 1:44 PM</time></span></span></div><div style="padding:0.2em">因为左闭右开，所以left和right不能相等。</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>
